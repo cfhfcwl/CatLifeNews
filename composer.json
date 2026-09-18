@@ -1,24 +1,15 @@
 {
-    "name": "topthink/think",
-    "description": "the new thinkphp framework",
+    "name": "cfhfcwl/cat-lifenews-api",
+    "description": "猫咪生活报 · 基于 ThinkPHP 8 的 REST API（待办 / 打卡 / 目标 / 记账 / 笔记）",
     "type": "project",
     "keywords": [
-        "framework",
         "thinkphp",
-        "ORM"
+        "thinkphp8",
+        "rest-api",
+        "php",
+        "jwt"
     ],
-    "homepage": "https://www.thinkphp.cn/",
     "license": "Apache-2.0",
-    "authors": [
-        {
-            "name": "liu21st",
-            "email": "liu21st@gmail.com"
-        },
-        {
-            "name": "yunwuxin",
-            "email": "448901948@qq.com"
-        }
-    ],
     "require": {
         "php": ">=8.0.0",
         "topthink/framework": "^8.0",
@@ -38,12 +29,14 @@
         }
     },
     "config": {
-        "preferred-install": "dist"
+        "preferred-install": "dist",
+        "sort-packages": true
     },
     "scripts": {
         "post-autoload-dump": [
             "@php think service:discover",
             "@php think vendor:publish"
-        ]
+        ],
+        "lint": "find app config route public -name '*.php' -print0 | xargs -0 -n1 php -l"
     }
 }
