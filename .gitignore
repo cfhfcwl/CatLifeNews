@@ -1,0 +1,7 @@
+/.env
+/.git
+/runtime
+/vendor
+*.log
+.DS_Store
+Thumbs.db
