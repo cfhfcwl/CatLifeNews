@@ -1,6 +1,6 @@
 <?php
 // +----------------------------------------------------------------------
-// | 数据库设置（MySQL · work 表前缀 cw_）
+// | 数据库设置（MySQL · cat_lifenews）
 // | 生产环境请通过 .env 配置，此处为兜底默认值
 // +----------------------------------------------------------------------
 
@@ -29,9 +29,9 @@ return [
             'type'            => env('DB_TYPE', 'mysql'),
             // 服务器地址
             'hostname'        => env('DB_HOST', '127.0.0.1'),
-            // 数据库名 —— 共享数据库 work
-            'database'        => env('DB_NAME', 'work'),
-            // 用户名 —— 数据库用户 root
+            // 数据库名 
+            'database'        => env('DB_NAME', 'cat_lifenews'),
+            // 用户名 
             'username'        => env('DB_USER', 'root'),
             // 密码
             'password'        => env('DB_PASS', ''),
@@ -41,8 +41,8 @@ return [
             'params'          => [],
             // 数据库编码
             'charset'         => env('DB_CHARSET', 'utf8mb4'),
-            // 数据库表前缀 —— 共享数据库用 cw_ 前缀避免冲突
-            'prefix'          => env('DB_PREFIX', 'cw_'),
+            // 数据库表前缀 
+            'prefix'          => env('DB_PREFIX', ''),
 
             // 数据库部署方式:0 集中式(单一服务器),1 分布式(主从服务器)
             'deploy'          => 0,

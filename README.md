@@ -30,22 +30,7 @@
 ```bash
 composer install
 ```
-
-### 2. 创建数据库
-
-```bash
-mysql -u root -p -e "CREATE DATABASE cat_lifenews DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_unicode_ci;"
-```
-
-### 3. 导入表结构与示例数据
-
-```bash
-mysql -u root -p cat_lifenews < database.sql
-```
-
-示例数据包含 1 个用户、3 条待办、2 个打卡项、2 个目标、5 条记账、2 篇笔记，导入后即可直接调接口看效果。
-
-### 4. 配置环境变量
+### 2. 配置环境变量
 
 ```bash
 cp .example.env .env
@@ -65,7 +50,18 @@ cp .example.env .env
 
 > `.env` 已被 `.gitignore` 排除，请勿提交。仓库里只保留占位值的 `.example.env`。
 
-### 5. 启动开发服务器
+### 3. 创建数据库
+
+```bash
+cp .example.env .env        # 按本机情况修改数据库配置
+composer install
+php think migrate:run       # 建表
+php think seed:run          # 演示数据（可选
+```
+
+示例数据包含 1 个用户、3 条待办、2 个打卡项、2 个目标、5 条记账、2 篇笔记，导入后即可直接调接口看效果。
+
+### 4. 启动开发服务器
 
 ```bash
 php think run --host 0.0.0.0 --port 8000
