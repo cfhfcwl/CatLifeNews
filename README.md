@@ -23,6 +23,19 @@
 
 ---
 
+## Docker 启动（推荐）
+
+无需安装 PHP / MySQL / 宝塔：
+
+​```bash
+cp .env.docker.example .env   # 按需改两个密码
+docker compose up -d --build  # 首次构建约 3–10 分钟
+docker compose exec php php think migrate:run
+docker compose exec php php think seed:run   # 演示数据（可选）
+​```
+
+打开 http://localhost:8080
+
 ## 快速启动
 
 ### 1. 安装依赖
