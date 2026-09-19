@@ -255,7 +255,6 @@ php think run --host 0.0.0.0 --port 8000
 │   └── add_updated_at.sql        # 历史补丁脚本（待并入迁移文件）
 ├── .github/workflows/ci.yml      # CI
 ├── .example.env                  # 环境变量示例（占位值）
-├── database.sql                  # 建表 + 示例数据
 ├── composer.json
 └── think                         # 命令行入口
 ```
